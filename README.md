@@ -1,4 +1,4 @@
-# Getting Started with PX to REM Converter
+# Getting Started with my portfolio
 
 Third version of my personal portfolio
 <div align="center">
