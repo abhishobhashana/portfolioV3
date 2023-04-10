@@ -38,6 +38,7 @@ export default function Experience() {
                   <a
                     href={experience.href}
                     target="_blank"
+                    rel="noreferrer"
                     className="cursor-pointer text-slate-100 hover:border-b hover:border-slate-100"
                   >
                     {experience.name}

@@ -43,7 +43,7 @@ export default function Projects() {
                 <h1 className="text-md leading-6 text-slate-200">
                   {project.name}
                 </h1>
-                <a href={project.link} target="_blank">
+                <a href={project.link} target="_blank" rel="noreferrer">
                   <Link />
                 </a>
               </div>

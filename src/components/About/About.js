@@ -31,6 +31,7 @@ export default function About() {
             <a
               href="https://www.thetfpl.com/"
               target="_blank"
+              rel="noreferrer"
               className="cursor-pointer text-slate-100 hover:border-b hover:border-slate-100"
             >
               {data.experience.techFlitter}
