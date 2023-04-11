@@ -1,8 +1,0 @@
-.nav {
-  transition: transform 150ms ease-in-out;
-}
-
-.nav-bar--hidden {
-  transform: translateY(-100%);
-  transition: transform 150ms ease-in-out;
-}

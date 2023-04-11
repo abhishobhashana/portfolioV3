@@ -15,8 +15,17 @@ body {
 }
 
 button {
-  padding: 0.313rem 1.125rem;
+  padding: 0.313rem 1.5rem;
   color: white;
+}
+
+.nav {
+  transition: transform 150ms ease-in-out;
+}
+
+.nav-bar--hidden {
+  transform: translateY(-100%);
+  transition: transform 150ms ease-in-out;
 }
 
 .preloader {
@@ -31,45 +40,48 @@ button {
 
 .logo {
   background-position: center;
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  opacity: 0;
+  animation: fade 3s ease-in-out forwards;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.5;
-  }
-  20% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.5;
-  }
+@keyframes fade {
+  0%,
   100% {
     opacity: 0;
   }
+  30%,
+  40%,
+  50%,
+  60%,
+  70% {
+    opacity: 1;
+  }
+}
+
+.underline-link {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-link:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgb(241 245 249);
+  content: "";
+  opacity: 0;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  transform: translateY(-5px);
+}
+
+.underline-link:focus:after,
+.underline-link:hover:after {
+  height: 1px;
+  border-radius: 4px;
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .preloader-none {

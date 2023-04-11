@@ -1,14 +1,6 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import {
-  Header,
-  Home,
-  About,
-  Experience,
-  Projects,
-  Contact,
-  Loader,
-} from "./components";
+import { Loader, Layout } from "./components";
 import { Helmet } from "react-helmet";
 import data from "./Data/Data.json";
 
@@ -35,12 +27,7 @@ function App() {
             <title>{data.app}</title>
             <meta name="description" content={data.home.intro}></meta>
           </Helmet>
-          <Header />
-          <Home />
-          <About />
-          <Experience />
-          <Projects />
-          <Contact />
+          <Layout />
         </BrowserRouter>
       </div>
     </>

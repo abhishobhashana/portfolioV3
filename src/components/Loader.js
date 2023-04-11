@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../Assets/icons/Logo";
+import Logo from "../Assets/icons/Logo";
 
 export default function Loader(props) {
   return (

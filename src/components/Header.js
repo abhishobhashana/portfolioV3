@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { HashLink as Link } from "react-router-hash-link";
-import useScrollListener from "../../hooks/useScrollListener";
-import data from "../../Data/Data.json";
-import "./style.css";
-import Logo from "../../Assets/icons/Logo";
+import useScrollListener from "../hooks/useScrollListener";
+import data from "../Data/Data.json";
+import Logo from "../Assets/icons/Logo";
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -109,11 +108,11 @@ export default function Header() {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
           >
-            <div className="fixed top-4 right-4 w-full max-w-xs rounded-lg shadow-lg p-5 text-base font-semibold bg-slate-800 text-slate-400 highlight-white/5">
+            <div className="fixed top-4 right-4 w-full max-w-xs rounded-lg shadow-lg p-6 text-base font-semibold bg-slate-800 text-slate-400 highlight-white/5">
               <Dialog.Panel>
-                <div className="flex flex-col w-full items-start justify-center gap-5">
+                <div className="flex flex-col w-full items-start justify-center gap-6">
                   <span
-                    className="absolute top-4 right-5 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 text-slate-400 hover:text-slate-300"
+                    className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center cursor-pointer text-slate-400 hover:text-slate-300"
                     onClick={() => setIsOpen(false)}
                   >
                     <svg
@@ -143,7 +142,7 @@ export default function Header() {
                       </Link>
                     );
                   })}
-                  <button className="font-bold font-mono text-sm bg-blue-600 hover:bg-blue-700 rounded-lg">
+                  <button className="font-bold font-mono bg-blue-600 hover:bg-blue-700 rounded-lg">
                     <a
                       href="/resume.pdf"
                       target="_blank"

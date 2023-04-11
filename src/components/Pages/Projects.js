@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../Data/Data.json";
-import Link from "../../Assets/icons/Link";
+import Section from "../Section/Section";
 
 export default function Projects() {
   const projects = [
@@ -23,16 +23,8 @@ export default function Projects() {
   ];
 
   return (
-    <div
-      className="grid lg:grid-cols-3 sm:grid-cols-1 lg:px-44 md:px-10 sm:px-10 lg:pt-20 md:p-10 sm:py-32 lg:gap-14 sm:gap-5"
-      id="projects"
-    >
-      <div className="flex lg:col-auto md:col-span-2 sm:col-span-2 sm:justify-start lg:justify-end lg:pt-28 md:pt-32 sm:pt-0 gap-10">
-        <h1 className="text-md leading-6 tracking-widest text-sky-400">
-          {data.projects.projectsTitle.toUpperCase()}
-        </h1>
-      </div>
-      <div className="flex lg:col-span-2 md:flex-col sm:flex-wrap lg:pt-28 p-5 lg:gap-10 sm:gap-10">
+    <Section id="projects" title={data.projects.projectsTitle}>
+      <div className="flex flex-col gap-10 text-md leading-6 text-slate-400">
         {projects.map((project) => {
           return (
             <div
@@ -40,14 +32,18 @@ export default function Projects() {
               key={project.id}
             >
               <div className="lg:max-w-4xl flex flex-row items-center gap-5">
-                <h1 className="text-md leading-6 text-slate-200">
-                  {project.name}
+                <h1 className="text-lg leading-6 text-slate-200">
+                  <a
+                    className="underline-link"
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.name}
+                  </a>
                 </h1>
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  <Link />
-                </a>
               </div>
-              <span className="text-sm text-slate-400">{project.details}</span>
+              <span className="text-md text-slate-400">{project.details}</span>
               <code className="block text-xs text-slate-400">
                 {project.tech.map((e, id) => (
                   <span
@@ -62,6 +58,6 @@ export default function Projects() {
           );
         })}
       </div>
-    </div>
+    </Section>
   );
 }
