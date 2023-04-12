@@ -59,7 +59,7 @@ export default function Header() {
     >
       <div className="md:flex md:w-full sm:flex sm:w-full">
         <div className="cursor-pointer" onClick={refresh}>
-          <Logo height="1rem" width="1rem" />
+          <Logo height="1.5rem" width="1.5rem" />
         </div>
       </div>
       <div className="hidden lg:flex md:items-center gap-6 light-grey sm:items-center gap-4 light-grey">
@@ -85,14 +85,14 @@ export default function Header() {
       <button
         type="button"
         onClick={openModal}
-        className="lg:hidden rounded-md bg-opacity-20 p-0 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none"
+        className="lg:hidden bg-opacity-20 p-0 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none"
       >
-        <div className="w-5 h-0.5 bg-gray-600 mb-1.5"></div>
-        <div className="w-5 h-0.5 bg-gray-600"></div>
+        <div className="w-6 h-0.5 bg-gray-500 mb-1.5 rounded-lg"></div>
+        <div className="w-6 h-0.5 bg-gray-500 rounded-lg"></div>
       </button>
       <Transition show={isOpen} as={Fragment}>
         <Dialog
-          className="fixed top-4 right-4 z-40 w-full max-w-xs rounded-lg shadow-lg p-6 text-base font-semibold bg-slate-800 text-slate-400 highlight-white/5"
+          className="fixed top-0 right-0 z-40 w-full max-w-xs rounded-lg shadow-lg p-6 text-base font-semibold bg-slate-800 text-slate-400 highlight-white/5"
           onClose={() => setIsOpen(false)}
         >
           <div
@@ -102,55 +102,57 @@ export default function Header() {
           <Transition.Child
             as={Fragment}
             enter="transition duration-200 ease-in-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
+            enterFrom="translate-x-full opacity-100"
+            enterTo="transform scale-100 translate-x-0 opacity-100"
             leave="transition duration-200 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0"
+            leaveFrom="translate-x-full opacity-100"
+            leaveTo="transform scale-100 translate-x-full opacity-100"
           >
-            <div className="fixed top-4 right-4 w-full max-w-xs rounded-lg shadow-lg p-6 text-base font-semibold bg-slate-800 text-slate-400 highlight-white/5">
+            <div className="fixed top-0 right-0 w-full max-w-xs rounded-lg shadow-large p-6 text-base font-semibold bg-[#112240] text-slate-400 highlight-white/5">
               <Dialog.Panel>
-                <div className="flex flex-col w-full items-start justify-center gap-6">
+                <div className="flex flex-col w-full h-screen items-center justify-center gap-6">
                   <span
-                    className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center cursor-pointer text-slate-400 hover:text-slate-300"
+                    className="absolute md:top-9 md:right-9 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center cursor-pointer text-gray-500 hover:text-slate-300"
                     onClick={() => setIsOpen(false)}
                   >
                     <svg
                       viewBox="0 0 10 10"
-                      className="w-2.5 h-2.5 overflow-visible"
+                      className="w-4 h-4 overflow-visible"
                       aria-hidden="true"
                     >
                       <path
                         d="M0 0L10 10M10 0L0 10"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="2"
+                        strokeWidth="1.4"
                         strokeLinecap="round"
                       ></path>
                     </svg>
                   </span>
-                  {navs.map((nav) => {
-                    return (
-                      <Link
-                        key={nav.id}
-                        smooth
-                        to={nav.path}
-                        className="font-bold text-slate-400 hover:text-sky-500"
-                        onClick={() => setIsOpen(false)}
+                  <div className="flex flex-col gap-12">
+                    {navs.map((nav) => {
+                      return (
+                        <Link
+                          key={nav.id}
+                          smooth
+                          to={nav.path}
+                          className="font-bold text-slate-400 hover:text-sky-500"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {nav.name}
+                        </Link>
+                      );
+                    })}
+                    <button className="font-bold font-mono bg-blue-600 hover:bg-blue-700 rounded-lg">
+                      <a
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        {nav.name}
-                      </Link>
-                    );
-                  })}
-                  <button className="font-bold font-mono bg-blue-600 hover:bg-blue-700 rounded-lg">
-                    <a
-                      href="/resume.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {data.resume}
-                    </a>
-                  </button>
+                        {data.resume}
+                      </a>
+                    </button>
+                  </div>
                 </div>
               </Dialog.Panel>
             </div>

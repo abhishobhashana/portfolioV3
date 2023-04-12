@@ -4,7 +4,7 @@ import data from "../../Data/Data.json";
 export default function Home() {
   return (
     <div
-      className="flex flex-col justify-center pt-24 h-screen py-10 gap-5 sm:m-auto sm:pt-20 p-5"
+      className="home flex flex-col justify-center pt-24 h-screen py-10 gap-5 sm:m-auto sm:pt-20 p-5"
       id="#"
     >
       <code className="font-medium text-sm text-sky-500 text-sky-400">

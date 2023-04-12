@@ -1,11 +1,17 @@
 import React from "react";
 
-export default function Section({ id, title, contactSection, children }) {
+export default function Section({
+  id,
+  className,
+  title,
+  contactSection,
+  children,
+}) {
   return (
     <>
       {contactSection ? (
         <div
-          className="flex flex-col lg:pt-5 p-10 pb-5 lg:mt-0 md:mt-0 sm:mt-20"
+          className={`${className} flex flex-col lg:pt-5 p-10 pb-5 lg:mt-0 md:mt-0 sm:mt-20`}
           id={id}
         >
           <div className="flex lg:pt-28 md:pt-32 sm:pt-0">
@@ -19,7 +25,7 @@ export default function Section({ id, title, contactSection, children }) {
         </div>
       ) : (
         <div
-          className="grid lg:grid-cols-4 lg:pt-5 lg:px-52 sm:p-10 lg:mt-0 md:mt-0 sm:mt-20 md:p-10 lg:gap-14 sm:gap-5"
+          className={`${className} grid lg:grid-cols-4 lg:pt-5 lg:px-52 sm:p-10 lg:mt-0 md:mt-0 sm:mt-20 md:p-10 lg:gap-14 sm:gap-5`}
           id={id}
         >
           <div className="flex lg:justify-end md:justify-start sm:justify-start lg:pt-28 md:pt-32 sm:pt-0">

@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Loader, Layout } from "./components";
 import { Helmet } from "react-helmet";
 import data from "./Data/Data.json";
+import useScrollAnimation from "./hooks/useScrollAnimation";
 
 function App() {
   const [load, upadateLoad] = React.useState(true);
@@ -13,6 +14,8 @@ function App() {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  useScrollAnimation();
 
   return (
     <>

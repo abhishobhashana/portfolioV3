@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "../Section/Section";
+
 import data from "../../Data/Data.json";
 
 export default function About() {
@@ -15,8 +16,9 @@ export default function About() {
     "Figma",
     "Sketch",
   ];
+
   return (
-    <Section id="about" title={data.about.background}>
+    <Section className="background" id="about" title={data.about.background}>
       <div className="flex flex-col gap-5 text-md leading-6 text-slate-400">
         <p>
           {data.about.detailIntro}{" "}

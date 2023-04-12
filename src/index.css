@@ -38,6 +38,15 @@ button {
   background-repeat: no-repeat;
 }
 
+.preloader-none {
+  opacity: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .logo {
   background-position: center;
   opacity: 0;
@@ -84,11 +93,6 @@ button {
   transform: translateY(-2px);
 }
 
-.preloader-none {
-  opacity: 0;
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
+.shadow-large {
+  box-shadow: -10px 0px 30px -15px rgb(2, 12, 27);
 }
