@@ -28,7 +28,7 @@ export default function Experience() {
       {experiences.map((experience) => {
         return (
           <div key={experience.id}>
-            <div className="lg:max-w-4xl flex lg:flex-row sm:flex-col lg:items-center lg:justify-between">
+            <div className="lg:max-w-4xl flex lg:flex-row sm:flex-col lg:items-center lg:justify-between sm:gap-2">
               <h1 className="text-lg leading-6 text-slate-200">
                 <a
                   href={experience.href}

@@ -4,8 +4,8 @@ export default function Github() {
   return (
     <svg
       fill="#fff"
-      width="30px"
-      height="30px"
+      width="1.875rem"
+      height="1.875rem"
       viewBox="-6 0 32 32"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

@@ -1,59 +1,57 @@
 import React from "react";
 import data from "../../Data/Data.json";
 import Section from "../Section/Section";
-
+import Link from "../../Assets/icons/Link";
+import Folder from "../../Assets/icons/Folder";
 export default function Projects() {
   const projects = [
     {
       id: 0,
-      name: data.projects.reactTemplate,
+      title: data.projects.reactTemplate,
       link: "https://www.github.com/abhiapatel/react-template",
-      details:
-        "React-Template is easy to use, has all files having folder structure that makes it easily changeable.",
+      desc: "React-Template is easy to use, has all files having folder structure that makes it easily changeable.",
       tech: ["JavaScript", "React", "React Router", "Tailwind CSS"],
     },
     {
       id: 1,
-      name: data.projects.pxToRem,
+      title: data.projects.pxToRem,
       link: "https://www.github.com/abhiapatel/px-to-rem",
-      details:
-        "PX to REM Converter converts pixels to the CSS unit REM. The conversion is based on the default font-size of 16px pixel.",
+      desc: "PX to REM Converter converts pixels to the CSS unit REM. The conversion is based on the default font-size of 16px pixel.",
       tech: ["JavaScript", "React", "React Router", "Tailwind CSS"],
     },
   ];
 
   return (
-    <Section className="projects" id="projects" title={data.projects.projectsTitle}>
-      <div className="flex flex-col gap-10 text-md leading-6 text-slate-400">
+    <Section
+      className="projects"
+      id="projects"
+      title={data.projects.projectsTitle}
+    >
+      <div className="grid lg:grid-cols-1 md:grid-cols-2 gap-10 text-md leading-6 text-slate-400">
         {projects.map((project) => {
           return (
             <div
-              className="lg:flex flex-col lg:gap-3 sm:flex sm:gap-2"
+              className="grid gap-7 p-5 bg-[#112240] shadow-lg rounded-lg"
               key={project.id}
             >
-              <div className="lg:max-w-4xl flex flex-row items-center gap-5">
-                <h1 className="text-lg leading-6 text-slate-200">
-                  <a
-                    className="underline-link"
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {project.name}
-                  </a>
-                </h1>
+              <div className="flex items-center justify-between">
+                <Folder />
+                <a
+                  className="underline-link"
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Link />
+                </a>
               </div>
-              <span className="text-md text-slate-400">{project.details}</span>
-              <code className="block text-xs text-slate-400">
-                {project.tech.map((e, id) => (
-                  <span
-                    key={id}
-                    className="inline-block p-1 mr-2 mt-2 rounded-md border border-slate-700"
-                  >
-                    {e}
-                  </span>
-                ))}
-              </code>
+              <div className="flex flex-col gap-3">
+                <h1 className="text-white text-xl">{project.title}</h1>
+                <span>{project.desc}</span>
+                <code className="text-sm text-slate-100">
+                  {project.tech.slice(",").join(" ")}
+                </code>
+              </div>
             </div>
           );
         })}

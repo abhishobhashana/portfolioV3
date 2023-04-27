@@ -55,7 +55,7 @@ export default function Header() {
     <div
       className={`${navClassList.join(
         " "
-      )} nav sticky sm:fixed top-0 z-40 w-full lg:py-5 lg:px-10 md:p-10 sm:p-7 flex justify-between items-center border-b border-slate-300/10 backdrop-blur flex-none transition-colors duration-500 border-slate-50/[0.06] bg-slate-900/75`}
+      )} nav sticky sm:fixed top-0 z-40 w-full lg:py-5 lg:px-10 md:p-10 sm:p-7 flex justify-between items-center shadow-lg backdrop-blur flex-none transition-colors duration-500 border-slate-50/[0.06] bg-slate-900/75`}
     >
       <div className="md:flex md:w-full sm:flex sm:w-full">
         <div className="cursor-pointer" onClick={refresh}>
@@ -92,7 +92,7 @@ export default function Header() {
       </button>
       <Transition show={isOpen} as={Fragment}>
         <Dialog
-          className="fixed top-0 right-0 z-40 w-full max-w-xs rounded-lg shadow-lg p-6 text-base font-semibold bg-slate-800 text-slate-400 highlight-white/5"
+          className="fixed top-0 right-0 z-40 max-w-xs rounded-lg shadow-lg p-6 text-xl bg-slate-800 text-slate-400 highlight-white/5"
           onClose={() => setIsOpen(false)}
         >
           <div
@@ -108,7 +108,7 @@ export default function Header() {
             leaveFrom="translate-x-full opacity-100"
             leaveTo="transform scale-100 translate-x-full opacity-100"
           >
-            <div className="fixed top-0 right-0 w-full max-w-xs rounded-lg shadow-large p-6 text-base font-semibold bg-[#112240] text-slate-400 highlight-white/5">
+            <div className="fixed top-0 right-0 w-full max-w-xs shadow-large p-6 bg-[#112240] text-slate-400 highlight-white/5">
               <Dialog.Panel>
                 <div className="flex flex-col w-full h-screen items-center justify-center gap-6">
                   <span
@@ -136,14 +136,14 @@ export default function Header() {
                           key={nav.id}
                           smooth
                           to={nav.path}
-                          className="font-bold text-slate-400 hover:text-sky-500"
+                          className="text-slate-400 hover:text-sky-500"
                           onClick={() => setIsOpen(false)}
                         >
-                          {nav.name}
+                          <h1>{nav.name}</h1>
                         </Link>
                       );
                     })}
-                    <button className="font-bold font-mono bg-blue-600 hover:bg-blue-700 rounded-lg">
+                    <button className="font-mono bg-blue-600 hover:bg-blue-700 rounded-lg">
                       <a
                         href="/resume.pdf"
                         target="_blank"

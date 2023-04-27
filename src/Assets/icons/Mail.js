@@ -3,8 +3,8 @@ import React from "react";
 export default function Mail() {
   return (
     <svg
-      width="28px"
-      height="28px"
+      width="1.75rem"
+      height="1.75rem"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
