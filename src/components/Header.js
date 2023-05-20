@@ -112,7 +112,7 @@ export default function Header() {
               <Dialog.Panel>
                 <div className="flex flex-col w-full h-screen items-center justify-center gap-6">
                   <span
-                    className="absolute md:top-9 md:right-9 sm:top-6 sm:right-6 w-8 h-8 flex items-center justify-center cursor-pointer text-gray-500 hover:text-slate-300"
+                    className="absolute md:top-11 md:right-9 sm:top-8 sm:right-6 w-8 h-8 flex items-center justify-center cursor-pointer text-gray-500 hover:text-slate-300"
                     onClick={() => setIsOpen(false)}
                   >
                     <svg

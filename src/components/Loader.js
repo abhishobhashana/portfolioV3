@@ -9,7 +9,7 @@ export default function Loader(props) {
       } h-screen flex flex-col items-center justify-center text-center bg-slate-900 px-4 p-5 gap-10`}
     >
       <div className="logo flex items-center">
-        <Logo height="2rem" width="2rem" />
+        <Logo height="4rem" width="4rem" fontSize="2.5rem" />
       </div>
     </div>
   );

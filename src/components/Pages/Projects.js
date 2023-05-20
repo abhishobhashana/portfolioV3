@@ -31,24 +31,19 @@ export default function Projects() {
         {projects.map((project) => {
           return (
             <div
-              className="grid gap-7 p-5 bg-[#112240] shadow-lg rounded-lg"
+              className="grid gap-7 p-6 bg-[#112240] shadow-lg rounded-lg"
               key={project.id}
             >
               <div className="flex items-center justify-between">
                 <Folder />
-                <a
-                  className="underline-link"
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={project.link} target="_blank" rel="noreferrer">
                   <Link />
                 </a>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 <h1 className="text-white text-xl">{project.title}</h1>
                 <span>{project.desc}</span>
-                <code className="text-sm text-slate-100">
+                <code className="mt-5 text-sm text-slate-300">
                   {project.tech.slice(",").join(" ")}
                 </code>
               </div>

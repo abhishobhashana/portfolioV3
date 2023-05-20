@@ -11,7 +11,7 @@ export default function Section({
     <>
       {contactSection ? (
         <div
-          className={`${className} flex flex-col lg:pt-5 p-8 pb-5 lg:mt-0 md:mt-0 sm:mt-20`}
+          className={`${className} flex flex-col lg:pt-5 lg:p-10 md:p-8 sm:p-8 pb-5 lg:mt-0 md:mt-0 sm:mt-20`}
           id={id}
         >
           <div className="flex lg:pt-28 md:pt-32 sm:pt-0">
@@ -29,11 +29,11 @@ export default function Section({
           id={id}
         >
           <div className="flex lg:justify-end md:justify-start sm:justify-start lg:pt-28 md:pt-32 sm:pt-0">
-            <h1 className="uppercase text-md leading-6 tracking-widest text-sky-400">
+            <h1 className="uppercase text-md leading-6 tracking-widest text-slate-200">
               {title}
             </h1>
           </div>
-          <div className="col-span-3 flex justify-start flex-col w-full lg:pt-28 gap-6">
+          <div className="col-span-3 flex justify-start flex-col w-full lg:pt-28 gap-8">
             {children}
           </div>
         </div>

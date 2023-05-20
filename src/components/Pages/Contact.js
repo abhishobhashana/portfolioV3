@@ -26,7 +26,7 @@ export default function Contact() {
     >
       <div className="flex lg:flex-row md:flex-col sm:flex-col lg:justify-between lg:items-center gap-5 text-md leading-6 text-slate-400">
         <div>
-          <h1 className="text-lg leading-6 text-slate-200">
+          <h1 className="text-xl leading-6 text-slate-200">
             {data.contact.content}
           </h1>
           <p className="mt-2 text-slate-400">{data.app}</p>

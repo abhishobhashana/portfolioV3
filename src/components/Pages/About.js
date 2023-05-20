@@ -5,7 +5,7 @@ import data from "../../Data/Data.json";
 
 export default function About() {
   const skills = [
-    "JavaScript (ES6)",
+    "JavaScript (ES6+)",
     "TypeScript",
     "React",
     "Redux",

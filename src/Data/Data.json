@@ -19,8 +19,10 @@
   "experience": {
     "experienceTitle": "experience",
     "novatrice": "Novatrice",
+    "selfEmployed": "Self Employed",
     "techFlitter": "Techflitter",
-    "dev": "Software Engineer"
+    "dev": "Software Engineer",
+    "frontDev": "Front End Developer"
   },
   "projects": {
     "projectsTitle": "work",
