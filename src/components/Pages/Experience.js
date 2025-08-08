@@ -15,7 +15,7 @@ export default function Experience() {
     {
       id: 1,
       name: data.experience.rex,
-      href: "https://www.novatrice.com/",
+      href: "https://www.rexinnovation.in/",
       desc: "Rendered technical expertise in Software Development Life Cycle to develop applications based on specific client requirements, Designed assessment forms for different customers that reduces processing time by 20%.",
       designation: data.experience.dev,
       year: "Jan 2021 — May 2022",
